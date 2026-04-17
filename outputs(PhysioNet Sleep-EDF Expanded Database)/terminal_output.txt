@@ -1,0 +1,945 @@
+========================================================
+  AUTOMATED SLEEP EEG ANALYSIS — GROUP 28
+========================================================
+
+Found 22 EDF file(s) to process.
+
+[1/22] Processing: SC4492G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1068.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1068.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2136 epochs of 30 s each.
+    Stage distribution:
+      W: 1402 epochs (701.0 min)
+      N1: 157 epochs (78.5 min)
+      N2: 417 epochs (208.5 min)
+      N3: 27 epochs (13.5 min)
+      R: 133 epochs (66.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2136 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.926     0.988     0.956
+    N1         0.511     0.146     0.228
+    N2         0.875     0.938     0.905
+    N3         0.727     0.593     0.653
+    R          0.865     0.820     0.842
+    ------------------------------------
+    Overall Accuracy : 90.1%
+    Cohen's Kappa   : 0.799
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 10.06 µV | found 254 spindles.
+    K-complex detection: amp_thr = 75 | found 362 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 90.1%  |  Kappa: 0.799  |  Spindles: 254  |  K-Cx: 362
+
+[2/22] Processing: SC4651E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1430.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1430.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2860 epochs of 30 s each.
+    Stage distribution:
+      W: 1640 epochs (820.0 min)
+      N1: 100 epochs (50.0 min)
+      N2: 821 epochs (410.5 min)
+      N3: 140 epochs (70.0 min)
+      R: 159 epochs (79.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2860 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.965     0.971     0.968
+    N1         0.634     0.450     0.526
+    N2         0.878     0.907     0.892
+    N3         0.842     0.836     0.839
+    R          0.836     0.799     0.817
+    ------------------------------------
+    Overall Accuracy : 91.8%
+    Cohen's Kappa   : 0.858
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 2.96 µV | found 207 spindles.
+    K-complex detection: amp_thr = 75 | found 654 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 91.8%  |  Kappa: 0.858  |  Spindles: 207  |  K-Cx: 654
+
+[3/22] Processing: SC4672G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1290.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1290.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2580 epochs of 30 s each.
+    Stage distribution:
+      W: 1904 epochs (952.0 min)
+      N1: 213 epochs (106.5 min)
+      N2: 339 epochs (169.5 min)
+      N3: 29 epochs (14.5 min)
+      R: 95 epochs (47.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2580 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.969     0.978     0.973
+    N1         0.689     0.540     0.605
+    N2         0.816     0.944     0.876
+    N3         0.833     0.690     0.755
+    R          0.787     0.621     0.694
+    ------------------------------------
+    Overall Accuracy : 92.1%
+    Cohen's Kappa   : 0.813
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 3.36 µV | found 249 spindles.
+    K-complex detection: amp_thr = 75 | found 164 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 92.1%  |  Kappa: 0.813  |  Spindles: 249  |  K-Cx: 164
+
+[4/22] Processing: SC4701E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1340.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1340.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2680 epochs of 30 s each.
+    Stage distribution:
+      W: 1698 epochs (849.0 min)
+      N1: 143 epochs (71.5 min)
+      N2: 699 epochs (349.5 min)
+      N3: 35 epochs (17.5 min)
+      R: 105 epochs (52.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2680 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.971     0.979     0.975
+    N1         0.451     0.224     0.299
+    N2         0.769     0.877     0.820
+    N3         0.710     0.629     0.667
+    R          0.667     0.438     0.529
+    ------------------------------------
+    Overall Accuracy : 88.7%
+    Cohen's Kappa   : 0.780
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 1.78 µV | found 178 spindles.
+    K-complex detection: amp_thr = 75 | found 58 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 88.7%  |  Kappa: 0.780  |  Spindles: 178  |  K-Cx: 58
+
+[5/22] Processing: SC4702E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1312.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1312.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2624 epochs of 30 s each.
+    Stage distribution:
+      W: 1816 epochs (908.0 min)
+      N1: 233 epochs (116.5 min)
+      N2: 444 epochs (222.0 min)
+      N3: 33 epochs (16.5 min)
+      R: 98 epochs (49.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2624 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.979     0.977     0.978
+    N1         0.725     0.725     0.725
+    N2         0.849     0.872     0.860
+    N3         0.720     0.545     0.621
+    R          0.735     0.735     0.735
+    ------------------------------------
+    Overall Accuracy : 92.2%
+    Cohen's Kappa   : 0.839
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 1.85 µV | found 89 spindles.
+    K-complex detection: amp_thr = 75 | found 110 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 92.2%  |  Kappa: 0.839  |  Spindles: 89  |  K-Cx: 110
+
+[6/22] Processing: SC4711E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1365.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1365.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2730 epochs of 30 s each.
+    Stage distribution:
+      W: 1769 epochs (884.5 min)
+      N1: 234 epochs (117.0 min)
+      N2: 605 epochs (302.5 min)
+      N3: 4 epochs (2.0 min)
+      R: 118 epochs (59.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2730 epochs total).
+  [4/6] Classifying sleep stages...
+Warning: One or more of the unique class values in the stratification variable is not present in one or more folds. For classification problems, either remove this
+class from the data or use N instead of the stratification variable to obtain nonstratified partitions. For regression problems with continuous response, use N. 
+> In internal.stats.cvpartitionImpl>stra_kfoldcv (line 439)
+In internal.stats/cvpartitionImpl/rerandom (line 338)
+In internal.stats/cvpartitionInMemoryImpl (line 232)
+In cvpartition (line 122)
+In classify_stages (line 37)
+In main (line 75) 
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.933     0.970     0.951
+    N1         0.443     0.346     0.388
+    N2         0.852     0.888     0.870
+    N3         0.000     0.000     0.000
+    R          0.779     0.508     0.615
+    ------------------------------------
+    Overall Accuracy : 87.7%
+    Cohen's Kappa   : 0.756
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 4.53 µV | found 227 spindles.
+    K-complex detection: amp_thr = 75 | found 258 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 87.7%  |  Kappa: 0.756  |  Spindles: 227  |  K-Cx: 258
+
+[7/22] Processing: SC4721E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1171.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1171.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2342 epochs of 30 s each.
+    Stage distribution:
+      W: 1568 epochs (784.0 min)
+      N1: 259 epochs (129.5 min)
+      N2: 341 epochs (170.5 min)
+      N3: 0 epochs (0.0 min)
+      R: 174 epochs (87.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2342 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.953     0.974     0.963
+    N1         0.455     0.375     0.411
+    N2         0.656     0.771     0.709
+    N3         0.000     0.000     0.000
+    R          0.710     0.506     0.591
+    ------------------------------------
+    Overall Accuracy : 84.4%
+    Cohen's Kappa   : 0.689
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 3.21 µV | found 237 spindles.
+    K-complex detection: amp_thr = 75 | found 41 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 84.4%  |  Kappa: 0.689  |  Spindles: 237  |  K-Cx: 41
+
+[8/22] Processing: SC4722E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1373.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1373.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2746 epochs of 30 s each.
+    Stage distribution:
+      W: 1926 epochs (963.0 min)
+      N1: 240 epochs (120.0 min)
+      N2: 444 epochs (222.0 min)
+      N3: 0 epochs (0.0 min)
+      R: 136 epochs (68.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2746 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.956     0.970     0.963
+    N1         0.476     0.446     0.460
+    N2         0.750     0.847     0.796
+    N3         0.000     0.000     0.000
+    R          0.600     0.287     0.388
+    ------------------------------------
+    Overall Accuracy : 87.1%
+    Cohen's Kappa   : 0.721
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 2.09 µV | found 359 spindles.
+    K-complex detection: amp_thr = 75 | found 11 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 87.1%  |  Kappa: 0.721  |  Spindles: 359  |  K-Cx: 11
+
+[9/22] Processing: SC4731E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1390.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1390.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2780 epochs of 30 s each.
+    Stage distribution:
+      W: 1953 epochs (976.5 min)
+      N1: 222 epochs (111.0 min)
+      N2: 470 epochs (235.0 min)
+      N3: 0 epochs (0.0 min)
+      R: 135 epochs (67.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2780 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.939     0.976     0.957
+    N1         0.443     0.230     0.303
+    N2         0.760     0.823     0.791
+    N3         0.000     0.000     0.000
+    R          0.706     0.659     0.682
+    ------------------------------------
+    Overall Accuracy : 87.5%
+    Cohen's Kappa   : 0.723
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 5.50 µV | found 645 spindles.
+    K-complex detection: amp_thr = 75 | found 6 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 87.5%  |  Kappa: 0.723  |  Spindles: 645  |  K-Cx: 6
+
+[10/22] Processing: SC4732E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1260.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1260.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2520 epochs of 30 s each.
+    Stage distribution:
+      W: 1550 epochs (775.0 min)
+      N1: 470 epochs (235.0 min)
+      N2: 364 epochs (182.0 min)
+      N3: 0 epochs (0.0 min)
+      R: 136 epochs (68.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2520 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.938     0.961     0.950
+    N1         0.667     0.611     0.638
+    N2         0.745     0.788     0.766
+    N3         0.000     0.000     0.000
+    R          0.812     0.699     0.751
+    ------------------------------------
+    Overall Accuracy : 85.7%
+    Cohen's Kappa   : 0.742
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 2.90 µV | found 203 spindles.
+    K-complex detection: amp_thr = 75 | found 22 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 85.7%  |  Kappa: 0.742  |  Spindles: 203  |  K-Cx: 22
+
+[11/22] Processing: SC4741E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1345.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1345.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2690 epochs of 30 s each.
+    Stage distribution:
+      W: 1708 epochs (854.0 min)
+      N1: 158 epochs (79.0 min)
+      N2: 611 epochs (305.5 min)
+      N3: 0 epochs (0.0 min)
+      R: 213 epochs (106.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2690 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.939     0.984     0.961
+    N1         0.489     0.139     0.217
+    N2         0.843     0.933     0.886
+    N3         0.000     0.000     0.000
+    R          0.765     0.643     0.699
+    ------------------------------------
+    Overall Accuracy : 89.6%
+    Cohen's Kappa   : 0.798
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 1.92 µV | found 212 spindles.
+    K-complex detection: amp_thr = 75 | found 0 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 89.6%  |  Kappa: 0.798  |  Spindles: 212  |  K-Cx: 0
+
+[12/22] Processing: SC4742E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1325.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1325.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2650 epochs of 30 s each.
+    Stage distribution:
+      W: 1895 epochs (947.5 min)
+      N1: 207 epochs (103.5 min)
+      N2: 340 epochs (170.0 min)
+      N3: 0 epochs (0.0 min)
+      R: 208 epochs (104.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2650 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.951     0.980     0.965
+    N1         0.469     0.329     0.386
+    N2         0.710     0.856     0.776
+    N3         0.000     0.000     0.000
+    R          0.704     0.481     0.571
+    ------------------------------------
+    Overall Accuracy : 87.4%
+    Cohen's Kappa   : 0.717
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 1.76 µV | found 153 spindles.
+    K-complex detection: amp_thr = 75 | found 1 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 87.4%  |  Kappa: 0.717  |  Spindles: 153  |  K-Cx: 1
+
+[13/22] Processing: SC4751E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1340.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1340.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2680 epochs of 30 s each.
+    Stage distribution:
+      W: 2064 epochs (1032.0 min)
+      N1: 102 epochs (51.0 min)
+      N2: 467 epochs (233.5 min)
+      N3: 0 epochs (0.0 min)
+      R: 47 epochs (23.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2680 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.953     0.984     0.968
+    N1         0.536     0.363     0.433
+    N2         0.929     0.872     0.899
+    N3         0.000     0.000     0.000
+    R          0.875     0.745     0.805
+    ------------------------------------
+    Overall Accuracy : 93.7%
+    Cohen's Kappa   : 0.824
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 4.24 µV | found 311 spindles.
+    K-complex detection: amp_thr = 75 | found 88 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 93.7%  |  Kappa: 0.824  |  Spindles: 311  |  K-Cx: 88
+
+[14/22] Processing: SC4752E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1235.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1235.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2470 epochs of 30 s each.
+    Stage distribution:
+      W: 1799 epochs (899.5 min)
+      N1: 143 epochs (71.5 min)
+      N2: 436 epochs (218.0 min)
+      N3: 20 epochs (10.0 min)
+      R: 72 epochs (36.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2470 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.915     0.954     0.934
+    N1         0.500     0.070     0.123
+    N2         0.721     0.860     0.785
+    N3         0.500     0.050     0.091
+    R          0.774     0.569     0.656
+    ------------------------------------
+    Overall Accuracy : 86.8%
+    Cohen's Kappa   : 0.676
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 6.00 µV | found 357 spindles.
+    K-complex detection: amp_thr = 75 | found 237 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 86.8%  |  Kappa: 0.676  |  Spindles: 357  |  K-Cx: 237
+
+[15/22] Processing: SC4761E0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1315.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1315.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2630 epochs of 30 s each.
+    Stage distribution:
+      W: 1996 epochs (998.0 min)
+      N1: 127 epochs (63.5 min)
+      N2: 445 epochs (222.5 min)
+      N3: 27 epochs (13.5 min)
+      R: 35 epochs (17.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2630 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.972     0.984     0.978
+    N1         0.630     0.591     0.610
+    N2         0.864     0.870     0.867
+    N3         0.731     0.704     0.717
+    R          0.750     0.343     0.471
+    ------------------------------------
+    Overall Accuracy : 93.4%
+    Cohen's Kappa   : 0.829
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 5.34 µV | found 140 spindles.
+    K-complex detection: amp_thr = 75 | found 238 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 93.4%  |  Kappa: 0.829  |  Spindles: 140  |  K-Cx: 238
+
+[16/22] Processing: SC4772G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1121.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1121.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2242 epochs of 30 s each.
+    Stage distribution:
+      W: 1671 epochs (835.5 min)
+      N1: 111 epochs (55.5 min)
+      N2: 240 epochs (120.0 min)
+      N3: 87 epochs (43.5 min)
+      R: 133 epochs (66.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2242 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.959     0.989     0.973
+    N1         0.562     0.243     0.340
+    N2         0.786     0.825     0.805
+    N3         0.800     0.782     0.791
+    R          0.903     0.910     0.906
+    ------------------------------------
+    Overall Accuracy : 92.1%
+    Cohen's Kappa   : 0.808
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 4.11 µV | found 52 spindles.
+    K-complex detection: amp_thr = 75 | found 260 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 92.1%  |  Kappa: 0.808  |  Spindles: 52  |  K-Cx: 260
+
+[17/22] Processing: SC4801G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1387.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1387.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2774 epochs of 30 s each.
+    Stage distribution:
+      W: 1821 epochs (910.5 min)
+      N1: 203 epochs (101.5 min)
+      N2: 595 epochs (297.5 min)
+      N3: 13 epochs (6.5 min)
+      R: 142 epochs (71.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2774 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.952     0.989     0.970
+    N1         0.516     0.389     0.444
+    N2         0.897     0.924     0.911
+    N3         0.800     0.615     0.696
+    R          0.757     0.570     0.651
+    ------------------------------------
+    Overall Accuracy : 90.8%
+    Cohen's Kappa   : 0.816
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 3.76 µV | found 297 spindles.
+    K-complex detection: amp_thr = 75 | found 158 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 90.8%  |  Kappa: 0.816  |  Spindles: 297  |  K-Cx: 158
+
+[18/22] Processing: SC4802G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1405.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1405.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2810 epochs of 30 s each.
+    Stage distribution:
+      W: 1923 epochs (961.5 min)
+      N1: 204 epochs (102.0 min)
+      N2: 541 epochs (270.5 min)
+      N3: 6 epochs (3.0 min)
+      R: 136 epochs (68.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2810 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.945     0.986     0.965
+    N1         0.571     0.294     0.388
+    N2         0.852     0.917     0.883
+    N3         0.000     0.000     0.000
+    R          0.754     0.632     0.688
+    ------------------------------------
+    Overall Accuracy : 90.4%
+    Cohen's Kappa   : 0.793
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 6.66 µV | found 230 spindles.
+    K-complex detection: amp_thr = 75 | found 319 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 90.4%  |  Kappa: 0.793  |  Spindles: 230  |  K-Cx: 319
+
+[19/22] Processing: SC4811G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1201.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1201.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2402 epochs of 30 s each.
+    Stage distribution:
+      W: 1469 epochs (734.5 min)
+      N1: 88 epochs (44.0 min)
+      N2: 528 epochs (264.0 min)
+      N3: 121 epochs (60.5 min)
+      R: 196 epochs (98.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2402 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.961     0.991     0.976
+    N1         0.409     0.102     0.164
+    N2         0.908     0.920     0.914
+    N3         0.887     0.843     0.864
+    R          0.833     0.913     0.871
+    ------------------------------------
+    Overall Accuracy : 92.9%
+    Cohen's Kappa   : 0.873
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 7.01 µV | found 328 spindles.
+    K-complex detection: amp_thr = 75 | found 372 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 92.9%  |  Kappa: 0.873  |  Spindles: 328  |  K-Cx: 372
+
+[20/22] Processing: SC4812G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1208.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1208.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2416 epochs of 30 s each.
+    Stage distribution:
+      W: 1689 epochs (844.5 min)
+      N1: 138 epochs (69.0 min)
+      N2: 349 epochs (174.5 min)
+      N3: 102 epochs (51.0 min)
+      R: 138 epochs (69.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2416 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.960     0.990     0.975
+    N1         0.464     0.232     0.309
+    N2         0.846     0.883     0.864
+    N3         0.838     0.863     0.850
+    R          0.796     0.790     0.793
+    ------------------------------------
+    Overall Accuracy : 91.4%
+    Cohen's Kappa   : 0.817
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 10.27 µV | found 254 spindles.
+    K-complex detection: amp_thr = 75 | found 263 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 91.4%  |  Kappa: 0.817  |  Spindles: 254  |  K-Cx: 263
+
+[21/22] Processing: SC4821G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1361.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1361.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2722 epochs of 30 s each.
+    Stage distribution:
+      W: 1858 epochs (929.0 min)
+      N1: 66 epochs (33.0 min)
+      N2: 408 epochs (204.0 min)
+      N3: 162 epochs (81.0 min)
+      R: 228 epochs (114.0 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2722 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.979     0.990     0.985
+    N1         0.333     0.015     0.029
+    N2         0.856     0.892     0.874
+    N3         0.929     0.883     0.905
+    R          0.774     0.886     0.826
+    ------------------------------------
+    Overall Accuracy : 93.7%
+    Cohen's Kappa   : 0.872
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 13.38 µV | found 321 spindles.
+    K-complex detection: amp_thr = 75 | found 266 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 93.7%  |  Kappa: 0.872  |  Spindles: 321  |  K-Cx: 266
+
+[22/22] Processing: SC4822G0-PSG.edf
+--------------------------------------------------
+  [1/6] Loading EDF data...
+    Channel: EEG Fpz-Cz  |  Fs: 100 Hz  |  Duration: 1405.0 min
+    Annotations: 2880 epochs loaded.
+  [2/6] Pre-processing & filtering...
+    Fs = 100 Hz | Signal length = 1405.0 min
+    FIR band-pass  (0.3–35 Hz, order 1000) applied.
+    Segmenting into 2810 epochs of 30 s each.
+    Stage distribution:
+      W: 1954 epochs (977.0 min)
+      N1: 121 epochs (60.5 min)
+      N2: 400 epochs (200.0 min)
+      N3: 156 epochs (78.0 min)
+      R: 179 epochs (89.5 min)
+  [3/6] Extracting features...
+    Features extracted: 24 per epoch (2810 epochs total).
+  [4/6] Classifying sleep stages...
+    Running 5-fold stratified CV...
+      Fold 1 complete.
+      Fold 2 complete.
+      Fold 3 complete.
+      Fold 4 complete.
+      Fold 5 complete.
+
+    Stage   Precision    Recall        F1
+    ------------------------------------
+    W          0.954     0.989     0.971
+    N1         0.421     0.132     0.201
+    N2         0.841     0.863     0.852
+    N3         0.902     0.885     0.893
+    R          0.623     0.637     0.630
+    ------------------------------------
+    Overall Accuracy : 90.6%
+    Cohen's Kappa   : 0.799
+  [5/6] Detecting spindles and K-complexes...
+    Spindle detection: threshold = 14.07 µV | found 296 spindles.
+    K-complex detection: amp_thr = 75 | found 281 K-complexes.
+  [6/6] Exporting results & plots...
+    Figures and CSVs saved to: D:\3-2\SAS\project\outputs
+  Accuracy: 90.6%  |  Kappa: 0.799  |  Spindles: 296  |  K-Cx: 281
+
+Writing summary CSV...
+
+========================================================
+  PIPELINE COMPLETE
+  Outputs saved to: D:\3-2\SAS\project\outputs
+========================================================
+>> 
