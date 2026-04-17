@@ -17,9 +17,9 @@ function [eeg, fs, ann_labels, ann_times] = load_edf(edf_path, data_dir)
 
     %% ── Read EDF signal ──────────────────────────────────────────────────
     try
-        % R2020b+ native edfread
-        [hdr, data] = edfread(edf_path);
-        signal_labels = hdr.SignalLabels;
+        % Modern R2020b+ native edfread via edfinfo
+        info = edfinfo(edf_path);
+        signal_labels = info.SignalLabels;
 
         % Prefer Fpz-Cz, fallback to EEG, then first channel
         chan_idx = find(contains(signal_labels, 'Fpz-Cz', 'IgnoreCase', true), 1);
@@ -27,17 +27,34 @@ function [eeg, fs, ann_labels, ann_times] = load_edf(edf_path, data_dir)
             chan_idx = find(contains(signal_labels, 'EEG', 'IgnoreCase', true), 1);
         end
         if isempty(chan_idx), chan_idx = 1; end
+        
+        target_sig = signal_labels{chan_idx};
 
-        eeg = data{chan_idx};
-        eeg = eeg(:);   % ensure column vector
-        fs  = hdr.SamplingFrequency(chan_idx);
+        % Read just the target signal to save memory
+        tt = edfread(edf_path, 'SelectedSignals', target_sig);
+        
+        % edfread timetables convert spaces/hyphens to underscores, 
+        % so we grab the first column dynamically rather than by exact name
+        vars = tt.Properties.VariableNames;
+        sig_data = tt.(vars{1});
+        
+        % Concatenate records into a single continuous vector
+        if iscell(sig_data)
+            eeg = vertcat(sig_data{:});
+        else
+            eeg = sig_data;
+        end
+        eeg = eeg(:);   
+        
+        % Calculate Sampling Frequency
+        fs = round(info.NumSamples(chan_idx) / seconds(info.DataRecordDuration));
 
         fprintf('    Channel: %s  |  Fs: %d Hz  |  Duration: %.1f min\n', ...
-                signal_labels{chan_idx}, fs, numel(eeg)/(fs*60));
+                target_sig, fs, numel(eeg)/(fs*60));
 
-    catch
+    catch ME
         % Fallback minimal reader
-        warning('edfread not available — using minimal EDF reader.');
+        warning('Native edfread failed. Using minimal EDF reader. Error: %s', ME.message);
         [eeg, fs] = read_edf_minimal(edf_path);
     end
 
@@ -71,11 +88,48 @@ end
 %% ── Helper: parse Hypnogram EDF ─────────────────────────────────────────
 function [labels, times] = parse_hypnogram_edf(hyp_path)
     try
-        [hdr, data] = edfread(hyp_path);
-        % EDF+ annotations are in a special TAL channel
-        ann_raw = data{end};
-        [labels, times] = decode_tal(ann_raw);
-    catch
+        % Modern R2020b+ annotation parsing via edfinfo
+        info = edfinfo(hyp_path);
+        
+        % Extract raw onsets, durations, and labels in seconds
+        raw_onsets = seconds(info.Annotations.Onset);
+        raw_durations = seconds(info.Annotations.Duration);
+        raw_labels = info.Annotations.Annotations;
+        
+        % Ensure labels are a cell array of strings
+        if isstring(raw_labels)
+            raw_labels = cellstr(raw_labels);
+        end
+        
+        EPOCH_SEC = 30;
+        labels = {};
+        times = [];
+        
+        % Expand duration blocks into 30-second epochs
+        for i = 1:numel(raw_labels)
+            % Skip metadata/movement events that aren't sleep stages
+            if isempty(raw_labels{i}) || contains(raw_labels{i}, 'Recording', 'IgnoreCase', true)
+                continue;
+            end
+            
+            % If a stage event is extremely short (e.g., < 15s), skip it.
+            % Otherwise, calculate how many 30s epochs fit inside.
+            n_epochs = round(raw_durations(i) / EPOCH_SEC);
+            
+            if n_epochs > 0
+                % Generate an array of onsets for this block
+                block_times = raw_onsets(i) + (0:n_epochs-1)' * EPOCH_SEC;
+                
+                % Duplicate the label for every epoch in the block
+                block_labels = repmat(raw_labels(i), n_epochs, 1);
+                
+                times = [times; block_times]; %#ok<AGROW>
+                labels = [labels; block_labels]; %#ok<AGROW>
+            end
+        end
+        
+    catch ME
+        warning('Failed to parse Hypnogram EDF: %s', ME.message);
         [labels, times] = deal({}, []);
     end
 

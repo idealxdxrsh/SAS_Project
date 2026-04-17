@@ -81,15 +81,14 @@ function [spindles, kcomplexes] = detect_transients(eeg_clean, fs, stage_labels)
     kc_candidate = false(N, 1);
 
     % Amplitude threshold: 75 µV pp in 1-s window, only N2/N3
-    amp_thr = 75e-6;   % assume µV units — adjust if signal is in V
-
     % Auto-scale threshold to signal amplitude
     sig_range = prctile(sig_lp, 95) - prctile(sig_lp, 5);
-    if sig_range > 1e-3     % signal likely in V
+    
+    if sig_range < 1e-2     % signal likely in V
         amp_thr = 75e-6;
-    elseif sig_range > 0.1  % mV
+    elseif sig_range < 10   % signal likely in mV
         amp_thr = 75e-3;
-    else                    % µV
+    else                    % signal likely in µV
         amp_thr = 75;
     end
 
