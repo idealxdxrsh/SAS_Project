@@ -99,3 +99,4 @@ MATLAB R2020b or later recommended (`edfread` built-in).
 | Kavish Kumar | 2023B1A30716G | Wavelet & Hilbert Analysis (inside `extract_features.m`) |
 | Munish Jain | 2023B1A80706G | Classifier & Validation (`classify_stages.m`) |
 | Adarsh | 2023B1A31167G | Transient Detection & Integration (`detect_transients.m`, `main.m`) |
+| Aditya Wagharwadi | 2023B5A80988G | Integration (`main.m`) |
